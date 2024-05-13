@@ -8,5 +8,5 @@ class mahasiswa
         int id;
         string nama;
 
-        
+        void setID();
 }
