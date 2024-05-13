@@ -21,5 +21,36 @@ class Mahasiswa
 
         Mahasiswa(string);
         Mahasiswa(int iNim, string iNama);
-        void cetak();
+        void cetak()
+        {
+            cout << "NIM    = " << nim << endl;
+            cout << "Nama   = " << nama << endl;
+            cout << endl;
+        }
 };
+
+Mahasiswa::Mahasiswa(string iNama)
+{
+    nama = iNama;
+};
+
+Mahasiswa::Mahasiswa(int iNim, string iNama)
+{
+    nim = iNim;
+    nama = iNama;
+};
+
+int main()
+{
+    Mahasiswa mhs1;
+    Mahasiswa mhs2(79);
+    Mahasiswa mhs3("Asyiraaf");
+    Mahasiswa mhs4(79,"Asyiraaf");
+
+    mhs1.cetak();
+    mhs2.cetak();
+    mhs3.cetak();
+    mhs4.cetak();
+
+    return 0;
+}
