@@ -4,17 +4,19 @@ using namespace std;
 
 class mahasiswa
 {
-    public:
-        static int nim;
-        int id;
-        string nama;
+public:
+    static int nim;
+    int id;
+    string nama;
 
-        void setID();
+    void setID();
 
-        void printAll();
+    void printAll();
 
-        mahasiswa(string pnama):nama(pnama)
-        {
-            setID();
-        }
+    mahasiswa(string pnama):nama(pnama)
+    {
+        setID();
+    }
 };
+
+int mahasiswa::nim = 20;
