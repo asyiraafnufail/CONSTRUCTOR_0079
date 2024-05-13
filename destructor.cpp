@@ -1,30 +1,39 @@
 #include <iostream>
 using namespace std;
 
-class Angka
+class angka
 {
     private:
         int *arr;
         int panjang;
      
     public:
-        Angka(int); //constructor
-        ~Angka(); //destructor
+        angka(int); //constructor
+        ~angka(); //destructor
         void cetakData();
         void isiData();
 };
 //definisi member function
-Angka::Angka(int i) //constructor
+angka::angka(int i) //constructor
 {
     panjang = i;
     arr = new int[i];
     isiData();
 }
 
-Angka::~Angka() //destructor
+angka::~angka() //destructor
 {
     cout << endl;
     cetakData();
     delete[]arr;
     cout << "Alamat array sudah dilepaskan" << endl;
 }
+
+void angka::cetakData()
+{
+    for(int i = 1; i <= panjang; i++)
+    {
+        cout << i << " = " << arr[i] << endl;
+    }
+}
+
